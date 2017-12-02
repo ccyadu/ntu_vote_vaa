@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>106-1 VAA - 臺大學生會選委會</title>
+	
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+	<style>
+	    input[type=radio],input[type=checkbox] {
+		border: 0px;
+		width: 1em;
+		height: 1em;
+		}
+		
+		table {
+		text-align: center;
+		}
+	</style>
+	<style>
+				/* NTUSA EREC site for 104-2 Election */
+				*,
+				.pure-g [class *="pure-u"] {
+					position: relative;
+					font-family: Georgia, "Microsoft JhengHei", sans-serif;
+					-webkit-box-sizing: border-box !important;
+					-moz-box-sizing: border-box !important;
+					box-sizing: border-box !important;
+				}
+				body {
+					width: 100%;
+					color: #212121;
+					font-size: 16px;
+				}
+				a {        /* BG */
+					color: rgb(64,137,155);
+				}
+				a:hover {   /* 連結 */
+					color: #CCC;
+					text-decoration: none;
+				}
+				.color-reverse * {  
+					color: #fff;
+				}
+				.color-reverse a {
+					color: #fff;
+					text-decoration: underline;
+				}
+				.color-reverse a:hover {
+					color: #CCC;
+					text-decoration: none;
+				}
+				.selfset-2-3 {
+					position: relative;
+					width: 66.6667%;
+					margin: 0 auto;
+				}
+				.page-section {
+					padding: 2em 0;
+				}
+				form {
+					margin: 1em auto !important;
+				}
+				#page-header {
+					margin: 0;
+					background: rgb(64,137,155);
+					text-align: center;
+					width: 100%;
+					padding: 1em 0;
+					color: #FFF;
+					overflow: hidden;
+				}
+				#page-header h1 {
+					line-height: 2;
+				}
+				#page-header h1 #form-title {
+					font-size: 150%;
+				}
+				#page-header img {
+					max-width: 640px;
+				}
+				#result {
+					padding: 1em 0;
+				}
+				.warning {
+					margin: 1em auto;
+					background: #EEE;
+					-webkit-border-radius: 8px;
+					-moz-border-radius: 8px;
+					-ms-border-radius: 8px;
+					border-radius: 8px;
+					padding: 1em 2em;
+				}
+				.pure-controls {
+					width: 75% !important;
+					margin: 1em 1em 1em auto !important;
+				}
+				.pure-control-group label {
+					width: 25% !important;
+					padding-right: 2.5em !important;
+					margin-right: -1.5em !important;
+				}
+				.pure-control-group .pure-input-1 {
+					width: 75% !important;
+					display: inline-block;
+					vertical-align: top;
+				}
+				.subtitle::before {
+					content: ' ※ ';
+				}
+				.subtitle::after {
+					content: ' ------------------------ ';
+				}
+				.preview {
+					display: none;
+					max-height: 32em;
+					max-width: 100%;
+				}
+				.pure-controls.attach {
+					margin-top: 0 !important;
+					padding-bottom: 1em !important;
+				}
+				.comment {
+					font-size: 80%;
+				}
+				
+				
+				.pure-button-primary {
+					background: rgb(64,137,155) !important;
+				}
+				.pure-button-primary:hover {
+					background: #fff !important;
+					color: #000 !important;
+					border: #f00 2px solid !important;
+					margin: -2px !important;
+				}
+				#page-footer {
+					background: rgb(64,137,155);
+					text-align: left;
+				}
+				@media screen and (max-width: 960px) {
+					.selfset-2-3 {
+						width: 576px;
+						margin: 0 auto;
+					}
+				}
+				@media screen and (max-width: 640px) {
+					.selfset-2-3 {
+						width: 96%;
+						margin: 0 auto;
+					}
+					.comment {
+						padding-left: 0;
+					}
+				}
+				@media screen and (max-width: 468px) {
+					.pure-controls,
+					.pure-input-1,
+					.pure-control-group label {
+						width: 100% !important;
+					}
+				}
+	</style>
+</head>
+
+<body>
+
+    <header id="page-header">
+      <h1>
+		<img src="https://raw.githubusercontent.com/katrina376/ntu-vote-page/master/1042/img/EREC_logo.png" alt="國立臺灣大學學生會選舉罷免執行委員會" class="selfset-2-3"/><br/>
+		<span id="form-title">投票輔助系統 VAA</span>
+		</h1>
+    </header>
+
+
+
+<div id="form-page">
+	<form id="aarrr" class="pure-form selfset-2-3">    
+		  <div class="page-section">
+          <label for="College"><span id="College-title"><h3>請選擇學院別</h3></span></label><br/>
+          <select id="College" name="College">
+			<option value="所有學院">所有學院</option>
+            <option value="文學院">文學院</option>
+            <option value="理學院">理學院</option>
+            <option value="社會科學院">社會科學院</option>
+            <option value="醫學院">醫學院</option>
+            <option value="工學院">工學院</option>
+            <option value="生物資源暨農學院">生物資源暨農學院</option>
+            <option value="管理學院">管理學院</option>
+            <option value="公共衛生學院">公共衛生學院</option>
+            <option value="電機資訊學院">電機資訊學院</option>
+            <option value="法律學院">法律學院</option>
+            <option value="生命科學院">生命科學院</option>
+            <option value="進修推廣學院">進修推廣學院</option>
+          </select>
+          </div>
+		
+		<div class="page-section">
+		<label for="q1" class="pure-radio"><h2>第一題</h2> 
+		<h3>議題背景說明</h3>
+		<p>長期以來，一直存在「學生會是否該舉辦大型康樂活動」的爭議。
+		贊成方認為透過活動舉辦得以增加學生會的能見度，提升學生的參與率，也可獲得部分校方經費補助，反對方則認為開銷過大，且校內大型活動已有藝術季、音樂節、杜鵑花節、新生音樂會等。
+		舉近兩年決算書為例，如下表所示。</p>
+		<img class="pure-img" src="http://homepage.ntu.edu.tw/~b03209020/YAYA.png">
+		<p>其他學期之相關預決算可於<a href="https://ntustudents.org/site/category/document/final-account/" target="_blank">台大學生會網站</a>下載取得。</p>
+		
+		<h3>Ｑ：您認為，活動舉辦應占學生會總預算的多少比例？</h3><br/>
+		<table class="pure-table pure-table-bordered" >
+			<thead>
+		  <tr>
+			<td><label for="q1-0">0%</label></td>
+			<td><label for="q1-1">10%</label></td> 
+			<td><label for="q1-2">20%</label></td>
+			<td><label for="q1-3">30%</label></td>
+			<td><label for="q1-4">40%</label></td>
+			<td><label for="q1-5">50%</label></td>
+			<td><label for="q1-6">60%</label></td>
+			<td><label for="q1-7">70%</label></td>
+			<td><label for="q1-8">80%</label></td>
+			<td><label for="q1-9">90%</label></td>
+			<td><label for="q1-10">100%</label></td>
+		  </tr>
+			</thead>
+			
+			<tbody>
+		  <tr>
+				<td><input id="q1-0" class="q1" name="Q1" type="radio" value="0"></td>
+				<td><input id="q1-1" class="q1" name="Q1" type="radio" value="1"></td>
+				<td><input id="q1-2" class="q1" name="Q1" type="radio" value="2"> </td>
+				<td><input id="q1-3" class="q1" name="Q1" type="radio" value="3" /required> </td>
+				<td><input id="q1-4" class="q1" name="Q1" type="radio" value="4"> </td>
+				<td><input id="q1-5" class="q1" name="Q1" type="radio" value="5"> </td>
+				<td><input id="q1-6" class="q1" name="Q1" type="radio" value="6"> </td>
+				<td><input id="q1-7" class="q1" name="Q1" type="radio" value="7"> </td>
+				<td><input id="q1-8" class="q1" name="Q1" type="radio" value="8"> </td>
+				<td><input id="q1-9" class="q1" name="Q1" type="radio" value="9"> </td>
+				<td><input id="q1-10" class="q1" name="Q1" type="radio" value="10"> </td>
+		</tr>
+			</tbody>
+		</table>
+		</label>
+		</div>
+	
+		<div class="page-section">
+		<label for="q2" class="pure-radio"><h2>第二題</h2>
+		<h3>Ｑ：未經學生意見調查的前提下，台大學生會可否代表台大學生進行議題表態？</h3>
+		<table class="pure-table pure-table-bordered" >
+		 <thead>
+		 <tr>
+			<td><label for="q2-1">絕對不行</label></td>
+			<td><label for="q2-2">部分不行</label></td> 
+			<td><label for="q2-3">中立</label></td>
+			<td><label for="q2-4">部分可以</label></td>
+			<td><label for="q2-5">絕對可以</label></td>
+		  </tr>
+		  </thead>
+		  <tr>
+				<td><input id="q2-1" class="q2" name="Q2" type="radio" value="1" /required></td> 
+				<td><input id="q2-2" class="q2" name="Q2" type="radio" value="2"></td>
+				<td><input id="q2-3" class="q2" name="Q2" type="radio" value="3"></td>
+				<td><input id="q2-4" class="q2" name="Q2" type="radio" value="4"></td>
+				<td><input id="q2-5" class="q2" name="Q2" type="radio" value="5"></td>
+		</table>
+		</div>
+		</label> 
+			
+		<div  class="page-section">
+		<label for="q3" class="pure-radio">
+		<h2>第三題</h2>
+		<h3>Ｑ：在您的理想中，台大校園空間與資源對外開放的程度？</h3>
+		<table class="pure-table pure-table-bordered">
+		<thead>
+			<tr>
+			<td><label for="q3-1">應僅限教職員工生使用</label></td>
+			<td><label for="q3-2"><-------</label></td> 
+			<td><label for="q3-3">--------</label></td>
+			<td><label for="q3-4">-------></label></td>
+			<td><label for="q3-5">應盡量開放給一般大眾</label></td>
+		  </tr>
+		  </thead>
+		  <tr>
+			<td><input id="q3-1" class="q3" name="Q3" type="radio" value="1" /required>  </td>
+			<td><input id="q3-2" class="q3" name="Q3" type="radio" value="2">  </td>
+			<td><input id="q3-3" class="q3" name="Q3" type="radio" value="3">  </td>
+			<td><input id="q3-4" class="q3" name="Q3" type="radio" value="4">  </td>
+			<td><input id="q3-5" class="q3" name="Q3" type="radio" value="5">  </td>
+		</table>			
+		</div>
+		</label> 
+		
+		<div class="page-section">
+		<label for="q4" class="pure-checkbox"><h2>第四題</h2>
+		<h3>Ｑ：假設有額外的一筆經費，您認為，臺大校方應優先將其投入在哪些項目？（至多兩項）</h3>
+		<p>本題選項是台大最主要的五種行政業務指掌分類。分別對應到：教務處、研究發展處、國際事務處、學務處、總務處。</p>
+		<input id="q4-1" class="q4" name="Q4" type="checkbox" value="41"><label for="q4-1"><label for="q4-1"> 教務（課程改革、開放式課程、學分學程、教學資源等）</label><br/>
+		<input id="q4-2" class="q4" name="Q4" type="checkbox" value="42"><label for="q4-2"><label for="q4-2"> 研究發展（產學合作、專利移轉、新進教授研究補助等）</label><br/>
+		<input id="q4-3" class="q4" name="Q4" type="checkbox" value="43"><label for="q4-3"><label for="q4-3"> 國際事務（姊妹校簽訂、國際學生權益、交換、寒暑期學術交流活動等）</label><br/>
+		<input id="q4-4" class="q4" name="Q4" type="checkbox" value="44"><label for="q4-4"><label for="q4-4"> 學生事務（課外活動、學生住宿、獎助學金、心輔資源等）</label><br/>
+		<input id="q4-5" class="q4" name="Q4" type="checkbox" value="45"><label for="q4-5"><label for="q4-5"> 總務（校園空間規劃、校園建築建設、設備維護購置、水電等）</label><br/>
+		</div>
+		</label> 
+	
+		<div class="page-section">
+		<label for="q5" class="pure-checkbox"><h2>第五題</h2>
+		<h3>Ｑ：在接下來的一年中，您覺得最重要的兩個校園議題是什麼？</h3>
+		<input id="q5-1" class="q5" name="Q5" type="checkbox" value="51"> 編碼一 <br/>
+		<input id="q5-2" class="q5" name="Q5" type="checkbox" value="52"> 編碼二 <br/>
+		<input id="q5-3" class="q5" name="Q5" type="checkbox" value="53"> 編碼三 <br/>
+		<input id="q5-4" class="q5" name="Q5" type="checkbox" value="54"> 編碼四 <br/>
+		<input id="q5-5" class="q5" name="Q5" type="checkbox" value="55"> 編碼五 <br/>
+		</div>
+		</label> 
+		
+		<div class="page-section">
+		<label for="q6" class="pure-checkbox"><h2>第六題</h2>
+		<h3>Ｑ：在接下來的一年中，您認為學生代表最重要的兩個任務是什麼？</h3>
+		<input id="q6-1" class="q6" name="Q6" type="checkbox" value="61"><label for="q6-1"> 出席開會（包含常會與委員會）</label><br/>
+		<input id="q6-2" class="q6" name="Q6" type="checkbox" value="62"><label for="q6-2"> 學生會體制或法規修正</label><br/>
+		<input id="q6-3" class="q6" name="Q6" type="checkbox" value="63"><label for="q6-3"> 學生權益推動（廢除服務學習、監督校內餐廳品質、腳踏車位規劃等）</label><br/>
+		<input id="q6-4" class="q6" name="Q6" type="checkbox" value="64"><label for="q6-4"> 社會議題倡議（性別議題、高等教育議題、提升助教與工讀勞動條件等）</label><br/>
+		<input id="q6-5" class="q6" name="Q6" type="checkbox" value="65"><label for="q6-5"> 監督學生會運作施政</label><br/>
+		<input id="q6-6" class="q6" name="Q6" type="checkbox" value="66"><label for="q6-6"> 彙集選民意見</label><br/>
+		</div>
+		</label> 
+		
+		<input id="arr-submit" type="submit" class="pure-button pure-button-primary" value="垃圾樁腳"/>
+		
+	</form>
+</div>
+
+<div id="result" class="selfset-2-3 page-section">
+</div>
+
+
+<script>
+	var pi=3.1415926;
+	var $ = function (s) { return document.querySelector(s); }
+	var $$ = function (s) { return document.querySelectorAll(s); }
+	<!-- s=id -->
+	
+	var output = 0;
+	var q_list = [
+		{ "name": "q1", "type": "radio" },
+		{ "name": "q2", "type": "radio" },
+		{ "name": "q3", "type": "radio" },
+		{ "name": "q4", "type": "checkbox" },
+		{ "name": "q5", "type": "checkbox" },
+		{ "name": "q6", "type": "checkbox" }
+	];
+	var candidate_list = [
+		{
+			"name": "A學代",
+			"College": "理學院",
+			"Number":"1",
+			"response":{
+				"q1":1,
+				"q2":2,
+				"q3":5,
+				"q4":[41,42],
+				"q5":[51,55],
+				"q6":[63,65]
+				},
+			"comment":{
+				"q1":"YA",
+				"q2":"YA",
+				"q3":"",
+				"q4":"",
+				"q5":"",
+				"q6":""
+			},
+			"similarity": 0
+		},
+		{
+			"name": "張禎晏",
+			"College": "理學院",
+			"Number":"2",
+			"response":{
+				"q1":10,
+				"q2":2,
+				"q3":1,
+				"q4":[44,45],
+				"q5":[53,54],
+				"q6":[62,64]
+				},
+				"comment":{
+				"q1":"YA",
+				"q2":"YA",
+				"q3":"",
+				"q4":"",
+				"q5":"",
+				"q6":""
+				},
+			"similarity": 0	
+	
+	
+		},
+		{
+			"name": "C學代",
+			"College": "理學院",
+			"Number":"3",
+			"response":{
+				"q1":5,
+				"q2":4,
+				"q3":4,
+				"q4":[41,42],
+				"q5":[52],
+				"q6":[61,64]
+				},
+				"comment":{
+				"q1":"YA",
+				"q2":"YA",
+				"q3":"",
+				"q4":"",
+				"q5":"",
+				"q6":""
+				},
+			"similarity": 0	
+		},
+		{
+			"name": "D學代",
+			"College": "理學院",
+			"Number":"4",
+			"response":{
+				"q1":7,
+				"q2":5,
+				"q3":5,
+				"q4":[45],
+				"q5":[55],
+				"q6":[64,65]
+				},
+				"comment":{
+				"q1":"YA",
+				"q2":"YA",
+				"q3":"",
+				"q4":"",
+				"q5":"",
+				"q6":""
+				},
+			"similarity": 0	
+		}
+	]
+	
+	function verify () {
+	var is_valid = true;
+	var input_data = {
+		"College":"",
+		"q1":"",
+		"q2":"",
+		"q3":"",
+		"q4":[],
+		"q5":[],
+		"q6":[]
+		}
+	for (var i = 3; i < q_list.length; ++i) {
+		var arr = $$("." + q_list[i]["name"]);
+			arr.forEach(function (el) {
+				if (el.checked) {
+					input_data[q_list[i]["name"]].push(parseInt(el.value));
+				}
+			}); 
+			if (input_data[q_list[i]["name"]].length != 2){
+						alert("第"+(i+1)+"題應選取兩個選項！");
+						is_valid = false;
+					}
+	}
+	return is_valid
+	}
+	
+	
+	function test () {
+		var input_data = {
+		"College":"",
+		"q1":"",
+		"q2":"",
+		"q3":"",
+		"q4":[],
+		"q5":[],
+		"q6":[]
+		}
+	
+	var col=$("#College");
+	input_data["College"] = col.options[col.selectedIndex].value;
+		
+	for (var i = 0; i < q_list.length; ++i) {
+		console.log(i)
+		console.log(q_list[i]["type"])
+		var arr = $$("." + q_list[i]["name"]);
+		if(i==1) {
+		arr.forEach(function (el) {
+				if (el.checked) {
+					input_data[q_list[i]["name"]] = parseInt(el.value);
+					for (var k = 0; k < candidate_list.length; ++k){
+						candidate_list[k]["similarity"] += 10*Math.cos(pi*input_data[q_list[i]["name"]]/40 - pi*candidate_list[k]["response"][q_list[i]["name"]]/40)
+					}
+				}
+			});
+		
+		} else if (q_list[i]["type"] == "radio") {
+			arr.forEach(function (el) {
+				if (el.checked) {
+					input_data[q_list[i]["name"]] = parseInt(el.value);
+					for (var k = 0; k < candidate_list.length; ++k){
+						candidate_list[k]["similarity"] += 10*Math.cos(pi*input_data[q_list[i]["name"]]/4 - pi*candidate_list[k]["response"][q_list[i]["name"]]/4)
+					}
+				}
+			});
+
+		} else if (q_list[i]["type"] == "checkbox") {
+			arr.forEach(function (el) {
+				if (el.checked) {
+					input_data[q_list[i]["name"]].push(parseInt(el.value));
+					for (var k = 0; k < candidate_list.length; ++k){
+						if (candidate_list[k]["response"][q_list[i]["name"]].includes(parseInt(el.value))) {
+							candidate_list[k]["similarity"] += 10;
+						}
+					}
+				}
+			});
+			console.log(input_data[q_list[i]["name"]].length )
+		}
+    }
+		return input_data;
+	}
+	
+	
+	$("#aarrr").addEventListener("submit",function(ev){
+	ev.preventDefault();
+	var is_valid = verify();
+	
+	if (is_valid) {
+		for (var i = 0; i < candidate_list.length; ++i) { 
+			candidate_list[i]["similarity"] = 0;
+		}
+		
+		var user_response = test();
+		
+		var sortable =[];
+		for (var i = 0; i < candidate_list.length; ++i) {
+			if(user_response["College"] == "所有學院"){
+				sortable.push(candidate_list[i])
+			} else if( user_response["College"] == candidate_list[i]["College"]){
+				sortable.push(candidate_list[i])
+			}
+		}
+		
+		//sort
+		sortable.sort(function(a, b) {
+			return b["similarity"] - a["similarity"];
+		})
+		
+			console.log(sortable)
+		$("#result").innerHTML = '<h2>結果</h2>';
+		for (var i = 0; i < sortable.length; ++i) {
+			$("#result").innerHTML
+			+= ( "<p>" + sortable[i]["name"] + "<br/>" + sortable[i]["College"] + "<br/>" + sortable[i]["similarity"] + "</p>")
+		}
+		console.log(user_response)
+	}
+	})
+</script>
+
+<div>
+</div>
+
+  <footer id="page-footer" class="page-section color-reverse">
+      <div class="contact selfset-2-3">
+        <h3>國立臺灣大學學生會選舉罷免執行委員會</h3>
+        Election &amp; Recalling Execution Commission, National Taiwan University Student Association <br/>
+        臺北市大安區羅斯福路四段一號（國立臺灣大學第一學生活動中心237室）<br/>
+        電子郵件信箱：<a href="mailto:ntuscvote@gmail.com" target="_top">ntuscvote@gmail.com</a><br/>
+        Facebook 粉絲專頁：<a href="https://www.facebook.com/NTUVote/" target="_blank">http://www.facebook.com/NTUVote</a>
+      </div>
+    </footer>
+</body>
+
+</html>
