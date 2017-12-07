@@ -13,7 +13,7 @@
 		height: 1em;
 		}
 		
-		table {
+		table * {
 		text-align: center;
 		}
 	</style>
@@ -52,11 +52,16 @@
 				}
 				.selfset-2-3 {
 					position: relative;
-					width: 66.6667%;
+					width: 83.3333%;
+					margin: 0 auto;
+				}
+				.selfset-9-10 {
+					position: relative;
+					width: 90%;
 					margin: 0 auto;
 				}
 				.page-section {
-					padding: 2em 0;
+					padding: 1em 0;
 				}
 				form {
 					margin: 1em auto !important;
@@ -91,6 +96,15 @@
 					border-radius: 8px;
 					padding: 1em 2em;
 				}
+				.answerzone {
+					margin: 2em auto;
+					background: #F08080;
+					-webkit-border-radius: 10px;
+					-moz-border-radius: 10px;
+					-ms-border-radius: 10px;
+					border-radius: 10px;
+					padding: 2em 2em;
+				}
 				.pure-controls {
 					width: 75% !important;
 					margin: 1em 1em 1em auto !important;
@@ -121,7 +135,32 @@
 					padding-bottom: 1em !important;
 				}
 				.comment {
-					font-size: 80%;
+					margin-left: 3em;
+					font-size: 90%;
+					position: relative;
+					margin-bottom: 3px;
+					background-color: white;
+				}
+				
+				.tab1 {
+					margin-left: 2em;
+				}
+				
+				.tab2 {
+					margin-left: 5em;
+				}				
+				
+				.middletable {
+					margin-left: auto;
+					margin-right: auto
+				}
+				
+				.color1 {
+					background-color: white;
+				}
+				
+				.color2{
+					background-color: rgb(64,137,155);
 				}
 				
 				
@@ -131,7 +170,7 @@
 				.pure-button-primary:hover {
 					background: #fff !important;
 					color: #000 !important;
-					border: #f00 2px solid !important;
+					border: rgb(64,137,155) 2px solid !important;
 					margin: -2px !important;
 				}
 				#page-footer {
@@ -149,7 +188,7 @@
 						width: 96%;
 						margin: 0 auto;
 					}
-					.comment {
+				.comment {
 						padding-left: 0;
 					}
 				}
@@ -171,35 +210,62 @@
 		<span id="form-title">投票輔助系統 VAA</span>
 		</h1>
     </header>
+	
+<div id="outline" class="page-section selfset-2-3">
+	<h3>106-1 臺大學生代表選舉資訊</h3>
+	<div class="tab1 warning">
+		<p>★ 第二份選舉公告：<a href="https://goo.gl/2qFb2f"> https://goo.gl/2qFb2f</a> </p>
+        <p>★ 選舉公報看這裡：<a href="https://goo.gl/Z2S1gF"> https://goo.gl/Z2S1gF</a> </p>
+        <p>★ 遠距投票申請（至12/15）：<a href="https://goo.gl/forms/4gMpjjJZCCY5raDo1"> https://goo.gl/forms/4gMpjjJZCCY5raDo1</a></p>
+		<p><b>★ 投票時間：2017年12月19日（星期二）09:30-18:00</b><p>
+		<p><b>★ 投票地點：活大、二活、普通、新生、共同、大一女、長興、水源、醫圖、公衛</b></p>
+	</div>
+	<h3>VAA簡介</h3>
+	<div class="tab1 warning">
+		<p>投票輔助系統（VAA，Voting Aid Application），旨在以簡單、方便的方式，提供選民了解候選人與自身對於各議題立場的遠近，協助選民得以更有效率的投下神聖的一票，並促進校園議題討論，以落實學生自治、校園民主的核心價值。</p>
+		<p>VAA 系統效仿自 EU Profiler 歐盟議題立場分析測驗，台灣 iVoter 團隊亦以立法委員對於重大爭議立場為題目推出<a href="http://ivoter.tw/profiler" target="_blank"> 類似平台</a>。</p>
+		<p>今年，台大學生會選委會決議首度嘗試引進 VAA 系統，並於106-1學生代表選舉中試行，於選舉投票前開放給所有台大學生使用，讓所有台大學生選民更了解各候選人的議題立場，做為投票參考。</p>
+		<p>所有選區共有74名學代候選人，選委會一共蒐集到43名候選人表態，填答率 58.1% </p>
+	</div>
+    <h3>VAA系統使用說明</h3>
+    <div class="tab1 warning">
+		<p>本問卷共有六題。</p>
+		<p>在完成填答並送出後，系統將根據您的填答，計算您與候選人的立場相似度，並將結果呈現排列於頁末。</p>
+		<p>本學期VAA系統僅為試行版，試試水溫、功能簡陋、開發期很短、選委會主委兼任網頁工程師非常菜，懇請大大見諒 TAT </p>
+		<p>如有任何疑慮或建議，請不吝提供給台大學生會選委會。可來信本會信箱（ntuscvote@gmail.com），或私訊<a href=https://www.facebook.com/NTUVote/ target="_blank"> 選委會FB粉絲專頁</a>。謝謝！
+	</div>
+</div>
+	
 
 <div id="form-page">
 	<form id="aarrr" class="pure-form selfset-2-3"> 
 		  <div class="page-section">
-          <label for="College"><span id="College-title"><h3>請選擇學院別</h3></span></label><br/>
-          <select id="College" name="College">
-			<option value="所有學院">所有學院</option>
-            <option value="文學院">文學院</option>
-            <option value="理學院">理學院</option>
-            <option value="社會科學院">社會科學院</option>
-            <option value="醫學院">醫學院</option>
-            <option value="工學院">工學院</option>
-            <option value="生物資源暨農學院">生物資源暨農學院</option>
-            <option value="管理學院">管理學院</option>
-            <option value="公共衛生學院">公共衛生學院</option>
-            <option value="電機資訊學院">電機資訊學院</option>
-            <option value="法律學院">法律學院</option>
-            <option value="生命科學院">生命科學院</option>
-            <option value="進修推廣學院">進修推廣學院</option>
-          </select>
+          <label for="College"><span id="College-title"><h2>※ 請選擇學院別</h2></span></label><br/>
+			<div class="tab1">
+				<select id="College" name="College" style="height:200%">
+				<option value="所有學院">所有學院</option>
+				<option value="文學院">文學院</option>
+				<option value="理學院">理學院</option>
+				<option value="社會科學院">社會科學院</option>
+				<option value="醫學院">醫學院</option>
+				<option value="工學院">工學院</option>
+				<option value="生物資源暨農學院">生物資源暨農學院</option>
+				<option value="管理學院">管理學院</option>
+				<option value="電機資訊學院">電機資訊學院</option>
+				<option value="法律學院">法律學院</option>
+				<option value="生命科學院">生命科學院</option>
+				</select>
+			</div>
           </div>
 
 		<div class="page-section">
 		<label for="q1" class="pure-radio"><h2>第一題</h2> 
+	<div class="tab1">
 		<h3>議題背景說明</h3>
 		<p>長期以來，一直存在「學生會是否該舉辦大型康樂活動」的爭議。
 		贊成方認為透過活動舉辦得以增加學生會的能見度，提升學生的參與率，也可獲得部分校方經費補助，反對方則認為開銷過大，且校內大型活動已有藝術季、音樂節、杜鵑花節、新生音樂會等。
-		舉近兩年決算書為例，如下表所示。</p>
-		<table class="pure-table pure-table-bordered" >
+		舉近兩年決算書為例，如下表所示。其他學期之相關預決算可於<a href="https://ntustudents.org/site/category/document/final-account/" target="_blank">台大學生會網站</a>下載取得。</p>
+		<table class="pure-table pure-table-bordered middletable" >
 		 <thead>
 		 <tr>
 			<td>學期</td>
@@ -235,10 +301,11 @@
 		  </tr>
 		  </tbody>
 		</table>
-		<p>其他學期之相關預決算可於<a href="https://ntustudents.org/site/category/document/final-account/" target="_blank">台大學生會網站</a>下載取得。</p>
-		
-		<h3>Ｑ：您認為，活動舉辦應占學生會總預算的多少比例？</h3><br/>
-		<table class="pure-table pure-table-bordered" >
+	</div>
+		<div class="tab1">
+		<h3>Ｑ：您認為，活動舉辦應占學生會總預算的多少比例？</h3>
+		</div>
+		<table class="pure-table pure-table-bordered middletable" >
 			<thead>
 		  <tr>
 			<td><label for="q1-0">0%</label></td>
@@ -260,7 +327,7 @@
 				<td><input id="q1-0" class="q1" name="Q1" type="radio" value="0"></td>
 				<td><input id="q1-1" class="q1" name="Q1" type="radio" value="1"></td>
 				<td><input id="q1-2" class="q1" name="Q1" type="radio" value="2"> </td>
-				<td><input id="q1-3" class="q1" name="Q1" type="radio" value="3" /required> </td>
+				<td><input id="q1-3" class="q1" name="Q1" type="radio" value="3" required /> </td>
 				<td><input id="q1-4" class="q1" name="Q1" type="radio" value="4"> </td>
 				<td><input id="q1-5" class="q1" name="Q1" type="radio" value="5"> </td>
 				<td><input id="q1-6" class="q1" name="Q1" type="radio" value="6"> </td>
@@ -273,11 +340,13 @@
 		</table>
 		</label>
 		</div>
-	
+
 		<div class="page-section">
 		<label for="q2" class="pure-radio"><h2>第二題</h2>
+		<div class="tab1">
 		<h3>Ｑ：未經學生意見調查的前提下，台大學生會可否代表台大學生進行議題表態？</h3>
-		<table class="pure-table pure-table-bordered" >
+		</div>
+		<table class="pure-table pure-table-bordered middletable" >
 		 <thead>
 		 <tr>
 			<td><label for="q2-1">絕對不行</label></td>
@@ -288,7 +357,7 @@
 		  </tr>
 		  </thead>
 		  <tr>
-				<td><input id="q2-1" class="q2" name="Q2" type="radio" value="1" /required></td> 
+				<td><input id="q2-1" class="q2" name="Q2" type="radio" value="1" required /></td> 
 				<td><input id="q2-2" class="q2" name="Q2" type="radio" value="2"></td>
 				<td><input id="q2-3" class="q2" name="Q2" type="radio" value="3"></td>
 				<td><input id="q2-4" class="q2" name="Q2" type="radio" value="4"></td>
@@ -300,19 +369,21 @@
 		<div  class="page-section">
 		<label for="q3" class="pure-radio">
 		<h2>第三題</h2>
+		<div class="tab1">
 		<h3>Ｑ：在您的理想中，台大校園空間與資源對外開放的程度？</h3>
-		<table class="pure-table pure-table-bordered">
+		</div>
+		<table class="pure-table pure-table-bordered middletable">
 		<thead>
 			<tr>
 			<td><label for="q3-1">應僅限教職員工生使用</label></td>
-			<td><label for="q3-2"><-------</label></td> 
-			<td><label for="q3-3">--------</label></td>
-			<td><label for="q3-4">-------></label></td>
+			<td><label for="q3-2">←←←←</label></td> 
+			<td><label for="q3-3">————</label></td>
+			<td><label for="q3-4">→→→→</label></td>
 			<td><label for="q3-5">應盡量開放給一般大眾</label></td>
 		  </tr>
 		  </thead>
 		  <tr>
-			<td><input id="q3-1" class="q3" name="Q3" type="radio" value="1" /required>  </td>
+			<td><input id="q3-1" class="q3" name="Q3" type="radio" value="1" required />  </td>
 			<td><input id="q3-2" class="q3" name="Q3" type="radio" value="2">  </td>
 			<td><input id="q3-3" class="q3" name="Q3" type="radio" value="3">  </td>
 			<td><input id="q3-4" class="q3" name="Q3" type="radio" value="4">  </td>
@@ -323,48 +394,65 @@
 		
 		<div class="page-section">
 		<label for="q4" class="pure-checkbox"><h2>第四題</h2>
-		<h3>Ｑ：假設有額外的一筆經費，您認為，臺大校方應優先將其投入在哪些項目？（至多兩項）</h3>
-		<p>本題選項是台大最主要的五種行政業務指掌分類。分別對應到：教務處、研究發展處、國際事務處、學務處、總務處。</p>
-		<input id="q4-1" class="q4" name="Q4" type="checkbox" value="41"><label for="q4-1"><label for="q4-1"> 教務（課程改革、開放式課程、學分學程、教學資源等）</label><br/>
-		<input id="q4-2" class="q4" name="Q4" type="checkbox" value="42"><label for="q4-2"><label for="q4-2"> 研究發展（產學合作、專利移轉、新進教授研究補助等）</label><br/>
-		<input id="q4-3" class="q4" name="Q4" type="checkbox" value="43"><label for="q4-3"><label for="q4-3"> 國際事務（姊妹校簽訂、國際學生權益、交換、寒暑期學術交流活動等）</label><br/>
-		<input id="q4-4" class="q4" name="Q4" type="checkbox" value="44"><label for="q4-4"><label for="q4-4"> 學生事務（課外活動、學生住宿、獎助學金、心輔資源等）</label><br/>
-		<input id="q4-5" class="q4" name="Q4" type="checkbox" value="45"><label for="q4-5"><label for="q4-5"> 總務（校園空間規劃、校園建築建設、設備維護購置、水電等）</label><br/>
+		<div class="tab1">
+		<h3>Ｑ：假設有額外的一筆經費，您認為，臺大校方應優先將其投入在哪些項目？（最多選填兩項）</h3>
+			<div class="tab1">
+			<p>本題選項是台大最主要的五種行政業務指掌分類。分別對應到：教務處、研究發展處、國際事務處、學務處、總務處。</p>
+			</div>
+		</div>
+			<div class="tab2">
+				<input id="q4-1" class="q4" name="Q4" type="checkbox" value="401"><label for="q4-1"><label for="q4-1"> 教務（課程改革、開放式課程、學分學程、教學資源等）</label><br/>
+				<input id="q4-2" class="q4" name="Q4" type="checkbox" value="402"><label for="q4-2"><label for="q4-2"> 研究發展（產學合作、專利移轉、新進教授研究補助等）</label><br/>
+				<input id="q4-3" class="q4" name="Q4" type="checkbox" value="403"><label for="q4-3"><label for="q4-3"> 國際事務（姊妹校簽訂、國際學生權益、交換、寒暑期學術交流活動等）</label><br/>
+				<input id="q4-4" class="q4" name="Q4" type="checkbox" value="404"><label for="q4-4"><label for="q4-4"> 學生事務（課外活動、學生住宿、獎助學金、心輔資源等）</label><br/>
+				<input id="q4-5" class="q4" name="Q4" type="checkbox" value="405"><label for="q4-5"><label for="q4-5"> 總務（校園空間規劃、校園建築建設、設備維護購置、水電等）</label><br/>
+			</div>
 		</div>
 		</label> 
 	
 		<div class="page-section">
 		<label for="q5" class="pure-checkbox"><h2>第五題</h2>
-		<h3>Ｑ：在下列選項中，您覺得最重要的兩個校園議題是什麼？</h3>
-		<input id="q5-1" class="q5" name="Q5" type="checkbox" value="1"><label for="q5-1"> 課程與學制改革 </label><br/>
-		<input id="q5-2" class="q5" name="Q5" type="checkbox" value="2"><label for="q5-2"> 校園安全與空間維護 </label><br/>
-		<input id="q5-3" class="q5" name="Q5" type="checkbox" value="3"><label for="q5-3"> 國際交流事務 </label><br/>
-		<input id="q5-4" class="q5" name="Q5" type="checkbox" value="4"><label for="q5-4"> 學生交流 </label><br/>
-		<input id="q5-5" class="q5" name="Q5" type="checkbox" value="5"><label for="q5-5"> 環境永續發展 </label><br/>
-		<input id="q5-6" class="q5" name="Q5" type="checkbox" value="6"><label for="q5-6"> 心輔資源 </label><br/>
-		<input id="q5-7" class="q5" name="Q5" type="checkbox" value="7"><label for="q5-7"> 服務學習 </label><br/>
-		<input id="q5-8" class="q5" name="Q5" type="checkbox" value="8"><label for="q5-8"> 學生自治 </label><br/>
-		<input id="q5-9" class="q5" name="Q5" type="checkbox" value="9"><label for="q5-9"> 校務政策參與 </label><br/>
-		<input id="q5-10" class="q5" name="Q5" type="checkbox" value="10"><label for="q5-10"> 校車 </label><br/>
-		<input id="q5-11" class="q5" name="Q5" type="checkbox" value="11"><label for="q5-11"> 校方資訊公開與服務改善 </label><br/>
-		<input id="q5-12" class="q5" name="Q5" type="checkbox" value="12"><label for="q5-12"> 學生住宿權益 </label><br/>
-		<input id="q5-13" class="q5" name="Q5" type="checkbox" value="13"><label for="q5-13"> 性別 </label><br/>
+		<div class="tab1">
+		<h3>Ｑ：在下列選項中，您覺得最重要的校園議題是什麼？(最多選填兩項)</h3>
+		</div>
+			<div class="tab2">
+				<input id="q5-1" class="q5" name="Q5" type="checkbox" value="1"><label for="q5-1"> 課程與學制改革 </label><br/>
+				<input id="q5-2" class="q5" name="Q5" type="checkbox" value="2"><label for="q5-2"> 校園安全與空間維護 </label><br/>
+				<input id="q5-3" class="q5" name="Q5" type="checkbox" value="3"><label for="q5-3"> 國際交流事務 </label><br/>
+				<input id="q5-4" class="q5" name="Q5" type="checkbox" value="4"><label for="q5-4"> 學生交流 </label><br/>
+				<input id="q5-5" class="q5" name="Q5" type="checkbox" value="5"><label for="q5-5"> 環境永續發展 </label><br/>
+				<input id="q5-6" class="q5" name="Q5" type="checkbox" value="6"><label for="q5-6"> 心輔資源 </label><br/>
+				<input id="q5-7" class="q5" name="Q5" type="checkbox" value="7"><label for="q5-7"> 學生勞動權益 </label><br/>
+				<input id="q5-8" class="q5" name="Q5" type="checkbox" value="8"><label for="q5-8"> 學生自治 </label><br/>
+				<input id="q5-9" class="q5" name="Q5" type="checkbox" value="9"><label for="q5-9"> 校務決策參與 </label><br/>
+				<input id="q5-10" class="q5" name="Q5" type="checkbox" value="10"><label for="q5-10"> 校車 </label><br/>
+				<input id="q5-11" class="q5" name="Q5" type="checkbox" value="11"><label for="q5-11"> 校方資訊公開與服務改善 </label><br/>
+				<input id="q5-12" class="q5" name="Q5" type="checkbox" value="12"><label for="q5-12"> 學生住宿權益 </label><br/>
+				<input id="q5-13" class="q5" name="Q5" type="checkbox" value="13"><label for="q5-13"> 性別議題 </label><br/>
+				
+			</div>
 		</div>
 		</label> 
 		
 		<div class="page-section">
 		<label for="q6" class="pure-checkbox"><h2>第六題</h2>
-		<h3>Ｑ：在接下來的一年中，您認為學生代表最重要的兩個任務是什麼？</h3>
-		<input id="q6-1" class="q6" name="Q6" type="checkbox" value="61"><label for="q6-1"> 出席開會（包含常會與委員會）</label><br/>
-		<input id="q6-2" class="q6" name="Q6" type="checkbox" value="62"><label for="q6-2"> 學生會體制或法規修正</label><br/>
-		<input id="q6-3" class="q6" name="Q6" type="checkbox" value="63"><label for="q6-3"> 學生權益推動（廢除服務學習、監督校內餐廳品質、腳踏車位規劃等）</label><br/>
-		<input id="q6-4" class="q6" name="Q6" type="checkbox" value="64"><label for="q6-4"> 社會議題倡議（性別議題、高等教育議題、提升助教與工讀勞動條件等）</label><br/>
-		<input id="q6-5" class="q6" name="Q6" type="checkbox" value="65"><label for="q6-5"> 監督學生會運作施政</label><br/>
-		<input id="q6-6" class="q6" name="Q6" type="checkbox" value="66"><label for="q6-6"> 彙集選民意見</label><br/>
+		<div class="tab1">
+		<h3>Ｑ：在接下來的一年中，您認為學生代表最重要的任務是什麼？(最多選填兩項)</h3>
+		</div>
+		<div class="tab2">
+		<input id="q6-1" class="q6" name="Q6" type="checkbox" value="601"><label for="q6-1"> 出席開會（包含常會與委員會）</label><br/>
+		<input id="q6-2" class="q6" name="Q6" type="checkbox" value="602"><label for="q6-2"> 學生會體制或法規修正</label><br/>
+		<input id="q6-3" class="q6" name="Q6" type="checkbox" value="603"><label for="q6-3"> 學生權益推動（廢除服務學習、監督校內餐廳品質、腳踏車位規劃等）</label><br/>
+		<input id="q6-4" class="q6" name="Q6" type="checkbox" value="604"><label for="q6-4"> 社會議題倡議（性別議題、高等教育議題、提升助教與工讀勞動條件等）</label><br/>
+		<input id="q6-5" class="q6" name="Q6" type="checkbox" value="605"><label for="q6-5"> 監督學生會運作施政</label><br/>
+		<input id="q6-6" class="q6" name="Q6" type="checkbox" value="606"><label for="q6-6"> 彙集選民意見</label><br/>
+		</div>
 		</div>
 		</label> 
 		
+		<div style="margin-left:auto;margin-right:auto">
 		<input id="arr-submit" type="submit" class="pure-button pure-button-primary" value="按我送出"/>
+		</div>
 		
 	</form>
 </div>
@@ -377,7 +465,6 @@
 	var pi=3.1415926;
 	var $ = function (s) { return document.querySelector(s); }
 	var $$ = function (s) { return document.querySelectorAll(s); }
-	<!-- s=id -->
 	
 	var output = 0;
 	var q_list = [
@@ -388,7 +475,7 @@
 		{ "name": "q5", "type": "checkbox" },
 		{ "name": "q6", "type": "checkbox" }
 	];
-	var candidate_list = [		
+		var candidate_list = [		
 {
     "name": "黃子軒",
     "College": "電機資訊學院",
@@ -397,23 +484,23 @@
       "q1":3,
       "q2":2,
       "q3":4,
-      "q4":[45,43],
+      "q4":[405,403],
       "q5":[2,3],
-      "q6":[63]
+      "q6":[603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"促進國際學生與本地生的交流",
-      "issue2":"推動改善/更新校園設施",
+      "issue2":" 和 推動改善/更新校園設施",
     },
-    "similarity":0
+    "similarity": 0, "link":"https://drive.google.com/open?id=120dBtmWR2iYEG3oDXyg4UEkiB5kQORbk"
  } ,
 {
     "name": "趙一穎",
@@ -423,23 +510,23 @@
       "q1":4,
       "q2":2,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[2,13],
-      "q6":[65]
+      "q6":[605]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"路平",
-      "issue2":"性別平等議題",
+      "issue2":" 和 性別平等議題",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1C6BPLL-JTmdWQrBpjZBKZsGXrcl4wxRE"
  } ,
 {
     "name": "王鈺能",
@@ -449,23 +536,23 @@
       "q1":2,
       "q2":2,
       "q3":4,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[1],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
       "q4":"提升教學品質和學術研究是好的大學該做的事",
-      "q5":"",
-      "q6":""
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"減少必修學分(通識和系定必修)",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1TtQ6UnCUIgaD3zbnQK2zIFGz3lADMt2L"
  } ,
 {
     "name": "歐瀚墨",
@@ -475,23 +562,23 @@
       "q1":3,
       "q2":4,
       "q3":3,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[2],
-      "q6":[65,61]
+      "q6":[605,601]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"校園施工安全及交通安全",
-      "issue2":"大學部學生的活動空間分配",
+      "issue2":" 和 大學部學生的活動空間分配",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1O2wjWI2lJOgqFdaXhO_Yr95by7jTPyJ2"
  } ,
 {
     "name": "楊智鈞",
@@ -501,23 +588,23 @@
       "q1":5,
       "q2":2,
       "q3":2,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[3],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"支持推動友善宗教校園、課程設計等有利外籍生交換生的議題",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1Lgj4nmp5e4yLith9HS-ylM_fpDRoLDqI"
  } ,
 {
     "name": "黃脩閔",
@@ -527,23 +614,23 @@
       "q1":5,
       "q2":2,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[2,11],
-      "q6":[65,61]
+      "q6":[605,601]
     },
     "comment":{
       "q1":"學生會又分成行政部門、立法部門、司法部門，其中行政部門又下轄許多部，有些部獨立於學校、監督政府，有些部則是要輔助學校相關活動，且很多性質非以部作為劃分，而是視活動性質而定。舉辦大型活動，諸如藝術季、杜鵑花節、校慶相關活動，不同而多元的活動，對於學生的感受力度最佳，故佔有一定程度的重要性，然而，學生會本身的執行費用、學生代表、學生法院的運作費用，也是重要的開銷，若只是舉辦大型活動，有可能也無法普及到所有人，畢竟參與活動者可能都會有共同特性，即使努力取交集也難以囊括到所有人，所以其他非活動性質的支出也是重要的，無論是爭取學生權利，都是盡量讓錢能夠分配的最有效率。",
       "q2":"學生會固然由選舉選出，學生賦予其民主正當性，且在選舉過程中投票的作為，本身就代表支持這一位候選人提出的理念、態度及執政方向，所以我認為不到完全不可以接受的狀態，特別是在不容許有完善時間進行學生意見調查時，我認同台大學生會直接表態。然而，學生藉由投票本身賦予的民主正當性，不等同認同這位候選人的所有觀點，有可能只是權衡之下的結果，支持某些政策同時也反對某些看法，只是在利益權衡之下仍投下這一票，所以對於不同的議題應該都要再給予學生表態空間。",
       "q3":"對於學校而言，場地是重要收入來源，且在訪問體育室康正男主任時可以發現，許多長久以來保養場地的費用，都仰賴出借場地所獲得，所以在一定程度下，出借給校外活動是重要的。然而，台大校園空間的分配，特別是在授課及球隊的時間，往往涉及到學生重要的學習權利，我覺得重點並不是校園空間與資源對外開放本身的程度高低，是分配時間與空間的問題，以及學生在這之中能夠給予意見的空間大小，像是這次中國新歌聲事件發生後，管理委員會討論國立臺灣大學校總區運動場館管理辦法，就將學生代表改為出席，並新增三名學生代表。",
       "q4":"盡量以能照顧到最多人、實踐學生最基本需求為目標，在取捨之下，我認為學生最貼近的便是每天的住宿、課外活動及學習本身．",
-      "q5":"",
+      "q5":"無。",
       "q6":"之所以選擇這兩個，是因為我認為「出席開會」，才是能實踐其他種種的最基本關鍵因素，出席開會．方能了解其他學代、選民、不同人的意見，又「監督學生會運作施政」是我覺得學代會另一個很根本的任務，基於權力分立，本來就需要類似立法機構的角色來制衡行政角色，其他也很重要的目的，像是學生權益推動、社會議題倡議、匯集選民意見，固然也十分重要，也是我認為學生代表應該做的，然而這些目標，卻不完全根屬於學生代表，任何社團、學生會、倡議團體也都能做，所以我選擇了「出席開會」及「監督學生會運作施政」這兩個完全根屬於學生代表應做的任務。"
     },
     "issue":{
       "issue1":"推動腳踏車位之規劃與改善，以大一女腳踏車車位建置為例，於大一女舍後面與校外人行道中間草地增設車位，與生治會溝通之後的場地管理，減少尋找車位，及堵塞、弄壞車子的憾事發生。",
-      "issue2":"期中期末的評鑑及意見回饋制度，以匿名的方式，資訊公開，能夠在選課時有更多參考依據，也能透過公開，讓教師選擇是否要答覆，保留公開答覆權，同時也有監督效果，並且能讓學生能知道其他同學的相關意見。",
+      "issue2":" 和 期中期末的評鑑及意見回饋制度，以匿名的方式，資訊公開，能夠在選課時有更多參考依據，也能透過公開，讓教師選擇是否要答覆，保留公開答覆權，同時也有監督效果，並且能讓學生能知道其他同學的相關意見。",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1Qcsbz_hleKffpw9fuhl76AdTN1X7TbMp"
  } ,
 {
     "name": "蔡庭熏",
@@ -553,9 +640,9 @@
       "q1":6,
       "q2":4,
       "q3":2,
-      "q4":[45,44],
+      "q4":[405,404],
       "q5":[2,12],
-      "q6":[64,63]
+      "q6":[604,603]
     },
     "comment":{
       "q1":"各種活動固然為學生會重要的功能，但這裡的活動應該區分成狹義（娛樂性）跟廣義，因為後者也有可能跟學生權益推動有關係，而單純前者在五至六成應是合理，因為如此對學生會才有拉贊的壓力，不會過度侵蝕到學權的部分。",
@@ -567,9 +654,9 @@
     },
     "issue":{
       "issue1":"住宿權益（BOT分配規範化、四千人宿舍園區時間表、性別友善宿舍）",
-      "issue2":"硬體設施（路平、社團活動空間、人文大樓）全面提升",
+      "issue2":" 和 硬體設施（路平、社團活動空間、人文大樓）全面提升",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1j79uKOxXiu1WKU2cqndiXSj-l4jPQdXM"
  } ,
 {
     "name": "王羿方",
@@ -579,23 +666,23 @@
       "q1":5,
       "q2":3,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[2],
-      "q6":[66,63]
+      "q6":[606,603]
     },
     "comment":{
       "q1":"理想上我認為學生會應著重大部分經費在權益的推動，活動佔預算比不應超過3成；舉辦活動交由外部團體社團，更具專業分工與多元性。但是實務上，學生會也肩負提升學生自治風氣與帶動同學關心公眾事務的任務，是故透過活動宣傳行銷、提高能見度與校園話題影響力，同時省去行銷廣告預算，舉辦活動讓同學同樂，亦可接納，綜上考量，我認為以5成為限為宜。",
       "q2":"我認為「議題」的範圍太過發散，仍須以議題討論。學生會具有群眾代表性，選民以此宣傳學生會為代表，自然認同其一部分之理念，針對普世價值議題表態並無太大問題。然而如果學生會之立場、價值與大多數同學脫鉤、又未經過意見調查，做出同學間意見有明顯分歧的表態（例如國族認同），則顯然濫權不適任。",
       "q3":"我校在週末時候有為數不少之民眾在校園內活動，遭有「國立臺灣大公園」之譏。但是參照國外知名大學所在之處皆有「大學城」，顯見大學與社區共存共榮是一件很重要的事，可以維持校園周邊治安、物價等。我校又是國立大學，自然不應該拒社區居民及大眾於門外，但仍應該認清學校之宗旨為教育研究之場所，一切都應該以校園師生、教學研究、學生活動用途為重，在此之外則可以盡可能開放給大眾，形成良性的互惠互動。",
-      "q4":"學校像是多頭馬車，國際化、學術排名、硬體建設等等，有很多的方向需要前進，尷尬的是經費卻非常拮据。校方往年已經把大量資源預算投入在國際化、學術研究上，相對冷落的是學生事務及學生教務，因此我認為額外的預算應投入在這兩項。",
+      "q4":"學校像是多頭馬車，國際化、學術排名、硬體建設等等，有很多的方向需要前進，尷尬的是經費卻非常拮据。校方往年已經把大量資源預算投入在國際化、學術研究上，相對冷落的是\"學生事務\"及學生\"教務\"，因此我認為額外的預算應投入在這兩項。",
       "q5":"學生課後學習（例如報告討論）、課外活動（社團活動）空間嚴重不足，所以我認為應該優先改善。其次是路平，不知道把路鋪平有沒有那麼難？",
       "q6":"我認為應該回歸到「學代」最根本的任務，就是匯集意見，維護並促進學生在校園的權益，其他部分行有餘力，再依輕重緩急來做。"
     },
     "issue":{
       "issue1":"增加學生活動與開放討論空間",
-      "issue2":"把路鋪平",
+      "issue2":" 和 把路鋪平",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1hJHZ0xlvawFvkUIS_W_N1vyA69W5G6a8"
  } ,
 {
     "name": "詹皓詠",
@@ -605,23 +692,23 @@
       "q1":3,
       "q2":4,
       "q3":2,
-      "q4":[45,44],
-      "q5":[4,6],
-      "q6":[63,61]
+      "q4":[405,404],
+      "q5":[7,6],
+      "q6":[603,601]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"視議題而定。同時符合下列兩條件者，我認為可以：1. 不會犧牲任何臺大學生的實質權益。無關是否違背學生個人信念，僅討論實質權益。2. 能增進部分臺大學生的實質權益，或透過聲援或實際支援他校學生團體，來增進他校學生的實質權益。若有損害部分臺大學生實質權益的可能性，就應該經過意見調查與損益評估。",
       "q3":"教職員工生絕對優先。再視該空間與資源的維護成本，來討論是否對外開放，以及是否需對開放對象收取維護費用。維護的經費應以不擠壓校內其他開銷的可用額度為原則。",
-      "q4":"",
-      "q5":"",
+      "q4":"無。",
+      "q5":"無。",
       "q6":"在我的認知中「提升助教與工讀勞動條件」亦是學生權益的一部分"
     },
     "issue":{
       "issue1":"補足心輔資源",
-      "issue2":"改善研究生、研究助理勞動條件",
+      "issue2":" 和 改善研究生、研究助理勞動條件",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1AJYkbh2BlAdFg4JqiHaeXY5VG4JZtbUG"
  } ,
 {
     "name": "潘儒鋒",
@@ -631,23 +718,23 @@
       "q1":5,
       "q2":2,
       "q3":3,
-      "q4":[44,41],
-      "q5":[1,7],
-      "q6":[63,61]
+      "q4":[404,401],
+      "q5":[1],
+      "q6":[603,601]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"廢除退學制度",
-      "issue2":"改革必修制度及服務學習制度",
+      "issue2":" 和 改革必修制度及服務學習制度",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1mxte9hy6HqwAbz9TJ4OQkr_MmZYlTb_m"
  } ,
 {
     "name": "高婕寧",
@@ -657,23 +744,23 @@
       "q1":5,
       "q2":1,
       "q3":3,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[1],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"應經過學代會認可",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"課程教學品質把關、重新檢視修課限制",
-      "issue2":"產學合作、學術交流，開放更多實習機會",
+      "issue2":" 和 產學合作、學術交流，開放更多實習機會",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1GeAND6ggg6pkJxPLLyNsRWYHOMSpiPeK"
  } ,
 {
     "name": "張舒茜",
@@ -683,23 +770,23 @@
       "q1":6,
       "q2":2,
       "q3":2,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[2],
-      "q6":[66]
+      "q6":[606]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"校園安全議題",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1R6ymNCm5v-4hNsgt2fABt0bHY8vcw8-h"
  } ,
 {
     "name": "尹聖凱",
@@ -709,23 +796,23 @@
       "q1":5,
       "q2":2,
       "q3":4,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[1,2],
-      "q6":[66,61]
+      "q6":[606,601]
     },
     "comment":{
       "q1":"像是這學期的臺大好時光，雖然有成功做出一個噱頭，然而實際上當天參與的人並沒有想像中那麼多。夜宿台大的部分，當天執行出來，也沒有達到預期的效果。之後的活動應該也要顧慮到天氣的問題，畢竟那麼冷，大家寧可窩在宿舍也不會想出來睡在草皮上。",
       "q2":"應該不用吧。沒有經過學生意見調查就逕行代表學生全體表態，被爆出來，後果肯定不堪設想。",
       "q3":"有些校園空間應該給校內學生優先使用。比如：運動場。眾所皆知，很多系隊其實都借不到場地，甚至得到河濱公園練習。人工草皮的部分也是。假日的時候也應該要盡量給校內學生使用。",
-      "q4":"教務的部分，我希望校方可以再多開設一些學程給學生修習，並在合理範圍內多開放修課學生的名額。總務的部分，希望可以把小椰林道整修鋪平，另外在校園死角增加更多防護措施。除了這些，希望校方能夠開放多一點城中總區的校車班次，對有些早九的學生來說，其實挺為難的。",
+      "q4":"\"教務\"的部分，我希望校方可以再多開設一些學程給學生修習，並在合理範圍內多開放修課學生的名額。\"總務\"的部分，希望可以把小椰林道整修鋪平，另外在校園死角增加更多防護措施。除了這些，希望校方能夠開放多一點城中總區的校車班次，對有些早九的學生來說，其實挺為難的。",
       "q5":"給臺大學生喝到臺大鮮奶的權利。每次早早去排，十次有九次排不到，真的有時候會對人生充滿絕望與無奈。每天的限制瓶數裡，希望可以撥個一半給限臺大學生購買，而不是那些老人。",
-      "q6":""
+      "q6":"無。"
     },
     "issue":{
       "issue1":"推動降低雙主修輔系門檻。大一的時候，看到身邊想轉系的同學朋友，廢寢忘食地念書就為了拿到書卷獎可以轉系，我覺得這樣有點浪費掉他們一些可以拿來玩社團的寶貴時間。甚至聽到有些系輔系要大概GPA4以上才比較有可能上，我覺得有點荒謬。雙主修輔系這種東西本來就是學生自己的決定，今天對雙其他科系有興趣，並不一定要在自己本科系屬於名列前茅者才有較大機會，大家的機會都是一樣的。",
-      "issue2":"腳踏車位規劃與obike 退出校園。可以效仿公館捷運站兩邊那些兩層式的腳踏車架，以節省空間。另外，為遏止隨處亂停obike，支持obike退出校園。",
+      "issue2":" 和 腳踏車位規劃與obike 退出校園。可以效仿公館捷運站兩邊那些兩層式的腳踏車架，以節省空間。另外，為遏止隨處亂停obike，支持obike退出校園。",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1UFzrG-0foUrJn1TR8lYQm7oNH4rzlWNx"
  } ,
 {
     "name": "蔡宏文",
@@ -735,23 +822,23 @@
       "q1":5,
       "q2":1,
       "q3":4,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[11,12],
-      "q6":[66,63]
+      "q6":[606,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"電子信箱整治",
-      "issue2":"住宿生權益",
+      "issue2":" 和 住宿生權益",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1YHILQE0aCWEdTr5bxVJm39gV3SR6g7bo"
  } ,
 {
     "name": "彭士庭",
@@ -761,23 +848,23 @@
       "q1":2,
       "q2":1,
       "q3":1,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[4],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
       "q1":"活動不是不行辦，但應該要觸及台大內各大族群，讓邊緣人不總是當分母。",
       "q2":"祝壽耶呵呵。",
       "q3":"我都買不到台大牛奶森77。外來種滾啦~",
       "q4":"應該要照顧校內邊緣人。",
-      "q5":"",
-      "q6":""
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
-      "issue1":"讓校內各種邊緣人過爽爽。",
+      "issue1":"讓校內各種邊緣人過爽爽",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1U5mZ85Z3Tx-pVatljCjEv9UVhpk47dR5"
  } ,
 {
     "name": "古智崴",
@@ -787,23 +874,23 @@
       "q1":5,
       "q2":3,
       "q3":2,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[2],
-      "q6":[66,63]
+      "q6":[606,603]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"我認為若該議題能增進全體學生的福祉，則可由學生會代為表態，但若該議題屬個案，僅影響少數學生，應在時間及其他資源考量下行學生意見調查。",
       "q3":"我認為台大雖是公眾場所，但同時為一學習場域，公共空間的開放應以不影響學生權益為底限，學習空間如系館、總圖則應盡量禁止外人使用。",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"我支持推動校園輕軌建設，因台大校地廣大，多數學生為了節省時間選擇以腳踏車代步，卻也因此衍生了如竊案、違停等問題，若是能支持推動校園輕軌建設，將有助於改善校園內部份交通亂象。",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1ALSfil-tyCF9_zzQBP-stp1l_cZbzzeu"
  } ,
 {
     "name": "王祥恒",
@@ -813,23 +900,23 @@
       "q1":3,
       "q2":2,
       "q3":3,
-      "q4":[45,44],
+      "q4":[405,404],
       "q5":[4,8],
-      "q6":[65,61]
+      "q6":[605,601]
     },
     "comment":{
       "q1":"辦康樂性的活動增加曝光度固然重要，但學生會的政策中，有更多的比例是放在校園自治措施的研擬和推行，又校內的其他大型活動已經很多，故學生會的康樂性活動占比可以再降低，應將經費用在提升學生自治措施的品質和周全性。",
       "q2":"學生會普遍被大眾認為是校園議題的倡議代表，因此代表台大學生進行議題表態，徵詢台大學生的意見是應該的，但如果過去已經針對特定議題調查過學生普遍的意見，則學生會對外表態時，引述過去的調查意見是可行的。",
       "q3":"應該先調查使用時所必需的專業能力與使用不當導致損害的風險評估，如果使用空間與資源並不需要專業訓練就能使用，對外開放並無不妥，因為公立學校的營運資源有很大一部分來自納稅人，反之若使用不當時會導致重大損害，或是使用時足以影響教學和研究，則校方有義務保障其資源必需受到妥善管制。",
-      "q4":"教務、研究、國際事務分別有幾個相對應的公部門經費來源，但學生事務和總務的經費來源有許多是自籌款，另外校園內仍然有許多學生事務和總務方面需要加強或自治的項目，因此額外的經費應該多投注在這兩項。",
-      "q5":"",
+      "q4":"\"教務\"、研究、\"國際事務\"分別有幾個相對應的公部門經費來源，但\"學生事務\"和\"總務\"的經費來源有許多是自籌款，另外校園內仍然有許多\"學生事務\"和\"總務\"方面需要加強或自治的項目，因此額外的經費應該多投注在這兩項。",
+      "q5":"無。",
       "q6":"監督並提升議事效率與議事過程公開也是必要的重要任務"
     },
     "issue":{
       "issue1":"推動學生之間的跨領域資訊交流",
-      "issue2":"學生議會議事過程公開即時轉播",
+      "issue2":" 和 學生議會議事過程公開即時轉播",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=175YDeauvVkkOpFBsB3BtUDUFww2zasl2"
  } ,
 {
     "name": "賴政瑋",
@@ -839,23 +926,23 @@
       "q1":5,
       "q2":3,
       "q3":3,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[2],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
       "q1":"我認為若規劃出與原校內大型活動不同效果之活動，即可舉辦，需要高額的金費也無妨。",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"環校自行車道",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1sH1awbWB2JRSOgr_yrj1zfaWT_EITxMg"
  } ,
 {
     "name": "林毅橙",
@@ -865,23 +952,23 @@
       "q1":3,
       "q2":2,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[2],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"學生會表達立場應有學生主體的支持",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"改善校園安全問題",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1dxWYjoDWioY9tSAlc-MzUkUEgBziGR8P"
  } ,
 {
     "name": "吳欣陽",
@@ -891,23 +978,23 @@
       "q1":10,
       "q2":1,
       "q3":1,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[1],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"英檢門檻廢除",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1VTPMOVlfQuyqtQB9NRKOIZ1T3k9SJ_6-"
  } ,
 {
     "name": "林博謙",
@@ -917,23 +1004,23 @@
       "q1":3,
       "q2":3,
       "q3":2,
-      "q4":[41],
+      "q4":[401],
       "q5":[8,9],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
       "q1":"舉辦活動的周邊成本很高，籌措也缺乏同學的普遍參與，活動帶來的效益(例如一個歡樂的假日)又不能延續很長一段時間。在資源充足的台北市及台大，是不是有由學生會再每年舉辦大型活動的必要值得商榷綜上所述，我認為不應該花太多學生會費辦活動",
       "q2":"這端視表態立場之性質、牽涉到的金錢與權力、處理時間的長短等因素，不可一概而論。台大學生會具有和校方直接對話的優勢，及組織意見的效率。越是急迫的校內事件(例如潑酸案、中國新歌聲田徑場事件案)越應該由學生會出面表態維護學權並到第一線和學校協調。但涉及的學生權力越核心或是牽涉到的款項越大的時候，學生會就應該把討論空間留給學生並退居二線，避免由少數人的聲音代表多數。例如是否在某個校內共有地上興建某某大型建物？或者要不要拿20%的學生會費配合學校做某些使用？到底學生會對全體台大學生的代表性大到什麼程度，需要視事件的脈絡而定，很難一概而論",
       "q3":"這其實是一個相當困難的問題，學校作為台北市少有的大片綠地吸引相當多的外人進來遊憩，農產品也常常受外人所喜愛而被搶購一空，這些都是台大做為一個自由開放校園所導致的特殊現象。然而，作為台大校園的主體又較一般納稅人多繳納了學雜費，台大學生就理當被擺在空間使用的第一優先。確保了台大學生在學校空間的使用上未受明顯損害後，開放外界人士分享台大資源，可以一定程度落實身為頂尖學府的社會責任，也可以提升周邊社區與台北市民對台大的親和度",
       "q4":"台大的課程雖然在帳面上看起來很多，但平均分配到數量龐大的學生之間就顯得不足，所以常常會有人抱怨選不到課。對國際學生而言，台大的英語授課課程非常少而且缺乏系統性，這會讓他們難以融入台大的學術環境，也沒辦法從台大學到太多東西甚至從而評斷台大的學術能力低落。在語言課程方面，學生一直都有相當強勁的學習二外與三外的需求，隨著邁頂計畫的結束也屢傳台大無力支撐語言課程的消息，若能有資源挹注想必會更符合大家的需求。",
-      "q5":"",
+      "q5":"無。",
       "q6":"出席開會是學代職責之本，我認為不該被視為最重要任務而是基本的職務守則。延續前述的立場，密切監督學生會運作是學代會組織與實質面的根本，其中財務又是我認為最核心的部分。若有餘力，應該促使學代會更為學生學權奮鬥，在學校和學生間搭起溝通的橋樑"
     },
     "issue":{
       "issue1":"對學生會及學校的財務與資源控管",
-      "issue2":"讓學代會成為爭取學權、更面向學生的團體，主動設定議題監督校方",
+      "issue2":" 和 讓學代會成為爭取學權、更面向學生的團體，主動設定議題監督校方",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1GGks1qmwnLrhCw3aq04cj1wwMEQjs0tr"
  } ,
 {
     "name": "葉芊均",
@@ -943,23 +1030,23 @@
       "q1":4,
       "q2":2,
       "q3":3,
-      "q4":[45,44],
-      "q5":[7],
-      "q6":[65,63]
+      "q4":[405,404],
+      "q5":[1],
+      "q6":[605,603]
     },
     "comment":{
       "q1":"我認為應就活動目的、參與形式和參與學生評估做檢討，規劃盡可能符合大家想像的活動，經費用得精才是重點。",
       "q2":"學生會應做到和學生對話，做議題討論時應避免落入扁平的立場表態，而是要注重校內學生內部異質性，謹慎面對學生對議題所發出的不同聲音，而非流於表面的形式代表。",
-      "q3":"",
-      "q4":"校內空間可就提升宿舍住宿品質和現在已持續推動的性別友善廁所做討論；學生事務以獎助學金與心輔資源為主。",
+      "q3":"無。",
+      "q4":"校內空間可就提升宿舍住宿品質和現在已持續推動的性別友善廁所做討論；\"學生事務\"以獎助學金與心輔資源為主。",
       "q5":"礙於現實考量，一個議題成熟的過程需要凝聚共識與反覆討論可行過程，故雖有更理想化的校園公共政策想推動，仍會先以較有可能施行且有前人努力基礎的廢服學議題為主要推動對象。",
-      "q6":""
+      "q6":"無。"
     },
     "issue":{
       "issue1":"廢除服務學習列為必修課程",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1hi-Vu2UXR0y2PJwr6xtnQ0O7oTJb47fJ"
  } ,
 {
     "name": "姚宗志",
@@ -969,23 +1056,23 @@
       "q1":4,
       "q2":3,
       "q3":4,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[2],
-      "q6":[65,61]
+      "q6":[605,601]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"改善校內交通動線及交通安全",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1JJeQHdWf0fhiDEo62lISCCW-jmuFYqEm"
  } ,
 {
     "name": "彭少甫",
@@ -995,23 +1082,23 @@
       "q1":4,
       "q2":5,
       "q3":3,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[9,11],
-      "q6":[64,63]
+      "q6":[604,603]
     },
     "comment":{
       "q1":"一所自由的大學不該什麼活動都由學校辦、學校規劃，學生會宜適時、靈活的辦理對多元、學生有益、富趣味性、具有傳承性、能凝聚同學們的活動，而經費應先盡力向學校爭取。",
       "q2":"綜觀台灣民主發展，台大學生會的表態當屬重要，雖不至振聾發聵，也至少提供強有力的學生意見進入言論平臺，並佔據一定程度的媒體版面。學生會之組成已有其民主正當性，應在重要時刻，即時、果決的表達立場。",
       "q3":"應取得平衡，公共空間可共享，學術資源應管制。",
       "q4":"好大學，基礎設施要好，課程要優質。",
-      "q5":"",
-      "q6":""
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"在校長遴選中，台大全體學生只有一票。學生應發揮影響力，改變現制，並積極的讓傾聽學生意見、落實學生要求的風氣進入遴選委員會，進而影響候選人的政見與承諾。",
-      "issue2":"在學校的重大決策上，學生應有知情權、參與權。學校的重要會議除了學生代表外，應開放學生旁聽；學校的重大決策應於SOP中加入廣徵學生意見一節。",
+      "issue2":" 和 在學校的重大決策上，學生應有知情權、參與權。學校的重要會議除了學生代表外，應開放學生旁聽；學校的重大決策應於SOP中加入廣徵學生意見一節。",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1-HT_J6SlGQUyAQI_feRqB6ndE9ViM4q7"
  } ,
 {
     "name": "吳昊",
@@ -1021,23 +1108,23 @@
       "q1":0,
       "q2":2,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[2,8],
-      "q6":[65,61]
+      "q6":[605,601]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"能以「學生會」身分表態，但應註明「不代表台大學生立場」",
-      "q3":"",
-      "q4":"",
-      "q5":"",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
       "q6":"嚴格監督學生會是否濫用預算，並監督同僚是否濫用學代身分和資源（例如為議長祝壽）"
     },
     "issue":{
       "issue1":"反對舉辦大型娛樂性活動",
-      "issue2":"找回失去的「垃圾桶」、「傘架」和「衛生紙」",
+      "issue2":" 和 找回失去的「垃圾桶」、「傘架」和「衛生紙」",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1tQilAq7lBoTOpRhyz4DmfhgjCELDlTlS"
  } ,
 {
     "name": "黃芝庭",
@@ -1047,23 +1134,23 @@
       "q1":5,
       "q2":3,
       "q3":2,
-      "q4":[45,44],
+      "q4":[405,404],
       "q5":[1,2],
-      "q6":[64,63]
+      "q6":[604,603]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"雖然學生自治投票率不高，但學生會長乃超過一定門檻而當選，因此應該能代表台大學生，且有些議題具有時效性，如何能完成全面的學生意見調查也是一大難題。",
       "q3":"台大校園的開放與便利性，吸引許多民眾進入學校使用資源，如此可能造成排擠效應，希望台大校園空間與資源規劃能以學生為優先考量。",
       "q4":"宿舍床位、心輔中心人力長期不足以及校內道路高低起伏，希望學校能盡速改善上列事項。",
-      "q5":"",
-      "q6":""
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"廢除英文畢業門檻",
-      "issue2":"路平專案",
+      "issue2":" 和 路平專案",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=16mMW7Vp25truYe-rpojfqLyge3eeaYEh"
  } ,
 {
     "name": "黃聖耀",
@@ -1073,23 +1160,23 @@
       "q1":6,
       "q2":2,
       "q3":2,
-      "q4":[44,42],
+      "q4":[404,402],
       "q5":[1,8],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
       "q1":"除了維護學生權益，應給予課業繁忙的同學，有足夠的課外活動選擇以調劑身心",
-      "q2":"",
+      "q2":"無。",
       "q3":"過度開放和缺少管制制度使得校園變成公園，影響繳交學費之學生的權益，近期的研究生宿舍情殺事件算是此議題的延伸，值得進一步探討",
       "q4":"學生優先",
-      "q5":"",
-      "q6":""
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"畢業英文門檻的廢除",
-      "issue2":"研究生協會的正常化，從學生會中獨立，並擁有研究生所繳交的學生會費之使用權，相對也需受到監督",
+      "issue2":" 和 研究生協會的正常化，從學生會中獨立，並擁有研究生所繳交的學生會費之使用權，相對也需受到監督",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1iJrKRJnsksY-qnQiA5kCw95wpDHLRoa5"
  } ,
 {
     "name": "李俊廷",
@@ -1099,23 +1186,23 @@
       "q1":4,
       "q2":1,
       "q3":3,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[11],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
       "q1":"我認為讓學生玩固然不錯，但是我認為錢應該可以發揮更多的用途。例如：與國際間其他學校的學生會交流。",
       "q2":"我認為不可以的原因是因為，學生會主要代表著學校的學生族群進行發聲（目前主要是為大學生的部分），但在沒有進行民意基礎的狀況下就直接對外發言的話，除了學生不會有共鳴之外，一些問題也無法很好的解決。",
       "q3":"不回答[5]的程度的原因是，一些資源本來就是給校內的人士使用，如果全部都開放的話校內教職員工和學生的權益會受到損失。例如校內課程的話有些需要看系所和教授的意願；校內的資源主要目的就是為了幫助校內的人，不可能花那麼多的心力在其他非台大的人士身上。",
-      "q4":"我認為教務和研究發展是首要的部分，如果想要吸引國外的大學跟我們簽訂合約，學生的素質和學校的研究、創新發展能力是首要的。但其他像是校園規劃的部分，除了已經決定好且急切要進行的部分之外，我認為可以不用一直把錢投注在蓋新大樓等。",
-      "q5":"",
-      "q6":""
+      "q4":"我認為\"教務\"和\"研究發展\"是首要的部分，如果想要吸引國外的大學跟我們簽訂合約，學生的素質和學校的研究、創新發展能力是首要的。但其他像是校園規劃的部分，除了已經決定好且急切要進行的部分之外，我認為可以不用一直把錢投注在蓋新大樓等。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"我想要推行無形資料的有型化。例如最近在討論的公車班次問題，其實最好的方式是需要有公車的每班次狀況，如搭乘人數、駛入校園的時間點等，這樣透過有統計基礎的資料，才能夠轉換為資訊來說服廠商，就不會變成各說各話。簡單來喔，不管是目前現有的或是要剛開始的東西，從架構到微調的部分，需要有一些統計資料，以方便做出比較好的選擇。",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1mqD5Er2wbi-VxP_xevXqYYpb28HAeqi8"
  } ,
 {
     "name": "葉柏廷",
@@ -1125,23 +1212,23 @@
       "q1":3,
       "q2":2,
       "q3":4,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[6],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
       "q1":"我認為可先設立基本額度供學生會使用，若有多餘支出再申請動用另外設立的特別金額，當然這方面需要監督。",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"建立讓學生能放心沒有負擔地進行情緒與人際關係相關諮商的機構或平台",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1ehyMzQP2mIIjH2yD7vxzzAsTJEXs5dsD"
  } ,
 {
     "name": "韓政軒",
@@ -1151,23 +1238,23 @@
       "q1":3,
       "q2":3,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[2],
-      "q6":[64,63]
+      "q6":[604,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"運動環境改造",
-      "issue2":"校內交通亂象改善",
+      "issue2":" 和 校內交通亂象改善",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1gkODIxUGU6zRcpNg9DKNVwzjXNpOBtcl"
  } ,
 {
     "name": "鄭芷穎",
@@ -1177,23 +1264,23 @@
       "q1":4,
       "q2":4,
       "q3":2,
-      "q4":[45,42],
+      "q4":[405,402],
       "q5":[2,6],
-      "q6":[64,63]
+      "q6":[604,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"學生心理輔導資源",
-      "issue2":"校內交通安全",
+      "issue2":" 和 校內交通安全",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1KXqehHugvou-gKu6B7W0fxG77Yu-BS1S"
  } ,
 {
     "name": "邱兆陽",
@@ -1203,23 +1290,23 @@
       "q1":4,
       "q2":4,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[6],
-      "q6":[66,65]
+      "q6":[606,605]
     },
     "comment":{
       "q1":"康樂活動能提升學生會在同學間的知名度，近期活動的宗旨也多將校園大小事融入其中，應予以支持，然而在同學的歡笑、粉專的觸擊之餘，還留下什麼具體對學生會、甚至學生整體的成效呢？本人認為，各個康樂活動是學生會大量曝光的最佳時機，在坐擁大量資源之時也應該多宣傳其他學生會的其他施政，如學術活動、工作坊等，否則康樂活動每年動輒投入百餘萬，佔學生會經費極大部分，若收益不彰（如105-2公關部舉行之開學派對）即是變相排擠其他部門的資源，應受到相對應的監督。",
       "q2":"學生會會長是經全體學生票選而出，已具一定的民意基礎，即代表選民認同學生會長對各項議題之觀點或價值判斷。",
       "q3":"本人認為，台大一切之資源經費皆來自於社會的貢獻，在學生一般使用之餘回饋給社會大眾是理所當然，但學校經費既經過預決算之程序交給學校，就應該以教職員工生為主體，不需特別迎合大眾的需求。",
-      "q4":"",
+      "q4":"無。",
       "q5":"身為一位求助過心輔中心、目前也仍持續約談的通學，本人認為心輔中心接住同學的第一道網——初談系統仍有很大的改進空間。雖然如有緊急需要可以隨時直接到心輔中心求助，但一般而言需要靠事先預約初談。對於發現自己撐不下去、並且鼓起勇氣尋求幫助的同學們，在登記初談時卻往往發現要排到一至兩禮拜。即便是自認情況不算太嚴重、可以接受等待的同學，這段空窗期無疑是一種煎熬？更何況是其實需要立即的協助、但沒有意識到自己問題嚴重性的同學，在這段等待的期間如果有什麼悲劇發生，無疑是輔導系統的疏失！心輔中心的諮商師仍不足額，應儘速補充。",
-      "q6":""
+      "q6":"無。"
     },
     "issue":{
       "issue1":"監督心輔中心諮商師數量達到學生輔導法之法定要求。",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1lCQox3YQ5IOrwbYVAdrIv_smaBKp_HTy"
  } ,
 {
     "name": "盧姳儒",
@@ -1229,23 +1316,23 @@
       "q1":5,
       "q2":2,
       "q3":3,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[1,6,9],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"若未經學生意見調查下，台大學生會只代表台大學生會而已",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"反對併校",
-      "issue2":"增加感情課程的比例",
+      "issue2":" 和 增加感情課程的比例",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1SWGDPct-0tDlC_MjhJ48V7D5Y3kt0HUk"
  } ,
 {
     "name": "張翔淵",
@@ -1255,23 +1342,23 @@
       "q1":5,
       "q2":1,
       "q3":1,
-      "q4":[44,43],
+      "q4":[404,403],
       "q5":[2,3],
-      "q6":[64,63]
+      "q6":[604,603]
     },
     "comment":{
       "q1":"利用活動充分讓大家認識彼此",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"重新校園內不平整道路",
-      "issue2":"增加與國外姐妹校交流",
+      "issue2":" 和 增加與國外姐妹校交流",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=12m2Ah0WAvHr1YlEljEm4L6OD46YkKaLc"
  } ,
 {
     "name": "林峪台",
@@ -1281,23 +1368,23 @@
       "q1":6,
       "q2":2,
       "q3":3,
-      "q4":[44,42],
+      "q4":[404,402],
       "q5":[1,8],
-      "q6":[66,63]
+      "q6":[606,603]
     },
     "comment":{
-      "q1":"",
+      "q1":"無。",
       "q2":"對於意見調查意願較低的項目，學生會應秉持為學生著想的本心進行表態。",
       "q3":"針對不同資源應有不同的合理限制",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"學生會費把關",
-      "issue2":"調整必修學分",
+      "issue2":" 和 調整必修學分",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1nLAMnpJx313fIb5a13wk9VZnCYqYDRaN"
  } ,
 {
     "name": "王作城",
@@ -1307,23 +1394,23 @@
       "q1":4,
       "q2":4,
       "q3":2,
-      "q4":[45,41],
-      "q5":[1,5,7],
-      "q6":[66,63]
+      "q4":[405,401],
+      "q5":[1,5],
+      "q6":[606,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
+      "q1":"無。",
+      "q2":"無。",
       "q3":"雖然臺大享有絕大多數的高教資源，但是臺大校園仍應屬於臺大教職員生，而非全臺灣的民眾。就算開放，也應有所限制。(如進入人數限制等)",
       "q4":"即使臺大排名得以重回百名，學生仍是對於臺大而言，最重要的事。其一，校內許多課程常常是學生怨聲載道，但是能年復一年地開，但是不久前卻有如拉貝明契老師那樣，受學生喜歡而不被續聘的老師；其二，校內許多空間其實十分老舊而不堪使用，甚至前兩年通過都審的人文大樓遲遲未動工，此可謂與學生最切身相關之事。當然，宿舍、心輔等亦不能偏廢。",
-      "q5":"",
+      "q5":"無。",
       "q6":"出席是應該的本份，而非任務。作為學生代表，理應匯集學生意見，還有推動學生權益，此才是學生代表真正所應當為，也必須為之事。"
     },
     "issue":{
       "issue1":"推動校園永續發展。",
-      "issue2":"推動英檢、服學畢業門檻廢除。",
+      "issue2":" 和 推動英檢、服學畢業門檻廢除。",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1T1YzIjZPQgRZnuf-qHsiSKIohy7nfvv_"
  } ,
 {
     "name": "楊宇倫",
@@ -1333,23 +1420,23 @@
       "q1":5,
       "q2":3,
       "q3":3,
-      "q4":[45,41],
-      "q5":[1,7],
-      "q6":[63,61]
+      "q4":[405,401],
+      "q5":[1],
+      "q6":[603,601]
     },
     "comment":{
       "q1":"我認為不應該教條地直接說活動舉辦應占學生會總預算的多少比例，而是應該看活動本身的意義。即便學生會有經費，但活動沒意義，該活動就不該舉辦。相反的，即使學生會財政短缺，但活動非常值得，我仍認為要咬緊牙關撐下去。",
-      "q2":"",
-      "q3":"",
-      "q4":"",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
       "q5":"其他內容可詳見本人政見欄",
-      "q6":""
+      "q6":"無。"
     },
     "issue":{
       "issue1":"檢討服務學習修課制度",
-      "issue2":"推動三校系統選課自由化",
+      "issue2":" 和 推動三校系統選課自由化",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1p9zmm6cdx3uilHvRlCq8IvJa_WwHJIMk"
  } ,
 {
     "name": "王詩閎",
@@ -1359,13 +1446,13 @@
       "q1":4,
       "q2":4,
       "q3":1,
-      "q4":[43],
+      "q4":[403],
       "q5":[2],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
+      "q1":"無。",
+      "q2":"無。",
       "q3":"每次在上課,都會聽到外面有一堆小孩在尖叫,著實影響上課環境,再來就是我所述的保健中心問題, 都被一堆校外人士搶走, 導致要等很久或是掛不到號",
       "q4":"在這個台大已經無法滿足我們的年代, 學校應該積極把台大變成一個跳板, 讓大家有更多離開台灣的機會",
       "q5":"上述兩點其實是我和不少同學共同的困擾",
@@ -1373,9 +1460,9 @@
     },
     "issue":{
       "issue1":"改善校園路況和照明狀況",
-      "issue2":"不使校園隨意開放給校外人士, 若有需要借道或是參觀需要事先申請",
+      "issue2":" 和 不使校園隨意開放給校外人士, 若有需要借道或是參觀需要事先申請",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1j55OP2QENCY33PeLTBmtXzxxJqgj_iOE"
  } ,
 {
     "name": "劉智祥",
@@ -1385,23 +1472,23 @@
       "q1":8,
       "q2":1,
       "q3":4,
-      "q4":[44,41],
+      "q4":[404,401],
       "q5":[1,2],
-      "q6":[63,61]
+      "q6":[603,601]
     },
     "comment":{
       "q1":"https://ntustudents.org/site/category/document/final-account/ 只是轉貼去年的決算書連結，辦活動當然可以提升學生會能見度，但希望大家也能看看學生會在哪些項目有支出，再想想是否符合成本效益。",
       "q2":"若是代表學生就不行，若是代表學生會就應該經過學生會三部門多數成員的意見調查。經過意見調查後代表台大學生對議題表態也應提供相關數字(如：抽樣樣本數、同意方、反對方等等)佐證。",
       "q3":"台大畢竟還是公立學校，應有相當程度的開放，但對外開放程度必須以不影響校內教職員工使用權益與安全為原則。例如共同教室的課程常常受到舟山路上面的民眾喧嘩干擾，就應盡量改善。",
-      "q4":"教務方面應該是受惠範圍最廣之項目，大學必須提供相對應的課程內容才符合教育的精神，長久看來影響深遠。學生事務次之，學生乃教育的主體，必須盡量使所有學生都能有適當的支持。",
-      "q5":"",
-      "q6":""
+      "q4":"\"教務\"方面應該是受惠範圍最廣之項目，大學必須提供相對應的課程內容才符合教育的精神，長久看來影響深遠。\"學生事務\"次之，學生乃教育的主體，必須盡量使所有學生都能有適當的支持。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"通識課程再鬆綁，繼續增加修課彈性。目前通識課程的認定皆是要經過共同教育中心認定，但為何僅認定低年級課程、不承認高年級課程，舉例來說：普通化學甲跟丙皆能抵通識A7，但有機化學就不能抵A7。",
-      "issue2":"校園夜間路燈照明，目前校園夜間照明稍嫌不足，像是椰林大道夜晚幾乎全黑，對於學生騎車安全有相當的危險性。",
+      "issue2":" 和 校園夜間路燈照明，目前校園夜間照明稍嫌不足，像是椰林大道夜晚幾乎全黑，對於學生騎車安全有相當的危險性。",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1I5BfPb-Co4VeTff1UZHkQoGnj9mBjY8J"
  } ,
 {
     "name": "吳宜燕",
@@ -1411,23 +1498,23 @@
       "q1":5,
       "q2":2,
       "q3":4,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[2],
-      "q6":[66,65]
+      "q6":[606,605]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"校園照明設備的更新或移除",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=11-mM60DQnb_sRA3B6QOm5JRFYDpIIz8p"
  } ,
 {
     "name": "廖貫廷",
@@ -1437,23 +1524,23 @@
       "q1":3,
       "q2":2,
       "q3":2,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[10],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"增設兩校區校車數量增加和總區校內的校車班次",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1DMgo4hWZloGlCgwQUNbqRqiHfdGnWng4"
  } ,
 {
     "name": "周哲宇",
@@ -1463,23 +1550,23 @@
       "q1":6,
       "q2":4,
       "q3":4,
-      "q4":[42,41],
+      "q4":[402,401],
       "q5":[10],
-      "q6":[63]
+      "q6":[603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"支持城中交通車班次增加",
       "issue2":"",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1udI9XFPLp6VO-ynixaRmDzjilcfAGwQq"
  } ,
 {
     "name": "林立云",
@@ -1489,25 +1576,184 @@
       "q1":5,
       "q2":2,
       "q3":5,
-      "q4":[45,41],
+      "q4":[405,401],
       "q5":[1,2],
-      "q6":[65,63]
+      "q6":[605,603]
     },
     "comment":{
-      "q1":"",
-      "q2":"",
-      "q3":"",
-      "q4":"",
-      "q5":"",
-      "q6":""
+      "q1":"無。",
+      "q2":"無。",
+      "q3":"無。",
+      "q4":"無。",
+      "q5":"無。",
+      "q6":"無。"
     },
     "issue":{
       "issue1":"校園空間規劃",
-      "issue2":"開放式課程",
+      "issue2":" 和 開放式課程",
     },
-    "similarity": 0
+    "similarity": 0, "link":"https://drive.google.com/open?id=1ugPiG2W8YphxgTxswk3FauM-Nyle6IKY"
 	}
 ]
+
+
+
+var noanswer_list = [		
+{
+    "name": "鄭維安",
+    "College": "文學院",
+    "Number":"2",
+ } ,
+ {
+    "name": "許傳維",
+    "College": "文學院",
+    "Number":"3",
+ } ,
+ {
+    "name": "凃峻清",
+    "College": "文學院",
+    "Number":"4",
+ } ,
+ {
+    "name": "吳明城",
+    "College": "文學院",
+    "Number":"5",
+ } ,
+ {
+    "name": "張凱昱",
+    "College": "文學院",
+    "Number":"7",
+ } ,
+ {
+    "name": "王楷",
+    "College": "理學院",
+    "Number":"4",
+ } ,
+ {
+    "name": "彭健瑋",
+    "College": "理學院",
+    "Number":"6",
+ } ,
+ {
+    "name": "侯智詠",
+    "College": "理學院",
+    "Number":"7",
+ } ,
+ {
+    "name": "陳奕安",
+    "College": "理學院",
+    "Number":"8",
+ } ,
+ {
+    "name": "鄭安宏",
+    "College": "社會科學院",
+    "Number":"2",
+ } ,
+  {
+    "name": "林奕宏",
+    "College": "社會科學院",
+    "Number":"5",
+ } ,
+  {
+    "name": "陳昀瑋",
+    "College": "社會科學院",
+    "Number":"11",
+ } ,
+  {
+    "name": "陳宜鴻",
+    "College": "社會科學院",
+    "Number":"12",
+ } ,
+   {
+    "name": "潘威霖",
+    "College": "醫學院",
+    "Number":"1",
+ } ,
+   {
+    "name": "王大鯤",
+    "College": "醫學院",
+    "Number":"3",
+ } ,
+   {
+    "name": "方榮華",
+    "College": "工學院",
+    "Number":"2",
+ } ,
+    {
+    "name": "劉育佑",
+    "College": "工學院",
+    "Number":"3",
+ } ,
+    {
+    "name": "鄭群嚴",
+    "College": "工學院",
+    "Number":"4",
+ } ,
+    {
+    "name": "柯哲邦",
+    "College": "工學院",
+    "Number":"6",
+ } ,
+    {
+    "name": "劉亞綸",
+    "College": "生物資源暨農學院",
+    "Number":"2",
+ } ,
+     {
+    "name": "蘇韓奇峰",
+    "College": "生物資源暨農學院",
+    "Number":"9",
+ } ,
+     {
+    "name": "黃圓",
+    "College": "管理學院",
+    "Number":"2",
+ } ,
+ {
+    "name": "何懿耘",
+    "College": "管理學院",
+    "Number":"4",
+ } ,
+ {
+    "name": "李辰訢",
+    "College": "管理學院",
+    "Number":"5",
+ } ,
+ {
+    "name": "蔡柏旻",
+    "College": "管理學院",
+    "Number":"7",
+ } ,
+ {
+    "name": "買沐恩",
+    "College": "管理學院",
+    "Number":"10",
+ } ,
+ {
+    "name": "鄭景平",
+    "College": "電機資訊學院",
+    "Number":"1",
+ } ,
+  {
+    "name": "周聖筌",
+    "College": "電機資訊學院",
+    "Number":"4",
+ } ,
+  {
+    "name": "游哲綸",
+    "College": "法律學院",
+    "Number":"1",
+ } ,
+   {
+    "name": "張子龍",
+    "College": "法律學院",
+    "Number":"5",
+ } ,
+    {
+    "name": "陳立倫",
+    "College": "生命科學院",
+    "Number":"1",
+ } ]
 	
 	function verify () {
 	var is_valid = true;
@@ -1526,9 +1772,9 @@
 				if (el.checked) {
 					input_data[q_list[i]["name"]].push(parseInt(el.value));
 				}
-			}); 
-			if (input_data[q_list[i]["name"]].length != 2){
-						alert("第"+(i+1)+"題應選取兩個選項！");
+			});
+			if (input_data[q_list[i]["name"]].length >= 3){
+						alert("第"+(i+1)+"題應選取至多兩個選項！");
 						is_valid = false;
 					}
 	}
@@ -1552,17 +1798,15 @@
 	input_data["College"] = col.options[col.selectedIndex].value;
 		
 	for (var i = 0; i < q_list.length; ++i) {
-		console.log(i)
-		console.log(q_list[i]["type"])
 		var arr = $$("." + q_list[i]["name"]);
-		if(i==1) {
-		arr.forEach(function (el) {
+		if(i==0) {
+			arr.forEach(function (el) {
 				if (el.checked) {
 					input_data[q_list[i]["name"]] = parseInt(el.value);
-					input_data["totalscore"] += 10
 					for (var k = 0; k < candidate_list.length; ++k){
 						candidate_list[k]["similarity"] += 10*Math.cos(pi*input_data[q_list[i]["name"]]/40 - pi*candidate_list[k]["response"][q_list[i]["name"]]/40)
 					}
+					input_data["totalscore"] +=10;
 				}
 			});
 		
@@ -1570,30 +1814,62 @@
 			arr.forEach(function (el) {
 				if (el.checked) {
 					input_data[q_list[i]["name"]] = parseInt(el.value);
-					input_data["totalscore"] += 10
 					for (var k = 0; k < candidate_list.length; ++k){
 						candidate_list[k]["similarity"] += 10*Math.cos(pi*input_data[q_list[i]["name"]]/4 - pi*candidate_list[k]["response"][q_list[i]["name"]]/4)
-
 					}
+					input_data["totalscore"] +=10;
 				}
 			});
-
+			
 		} else if (q_list[i]["type"] == "checkbox") {
 			arr.forEach(function (el) {
 				if (el.checked) {
 					input_data[q_list[i]["name"]].push(parseInt(el.value));
-					input_data["totalscore"] += 20
 					for (var k = 0; k < candidate_list.length; ++k){
 						if (candidate_list[k]["response"][q_list[i]["name"]].includes(parseInt(el.value))) {
 							candidate_list[k]["similarity"] += 10;
 					}
 					}
+					input_data["totalscore"] +=10;
 				}
 			});
-			console.log(input_data[q_list[i]["name"]].length )
 		}
     }
+
 		return input_data;
+	}
+	
+	var IloveRS ={
+		"1": "絕對不行",
+		"2": "部份不行",
+		"3": "中立",
+		"4": "部份可以",
+		"5": "絕對可以"
+	}
+	
+	var IloveAARRR ={
+		"1": "應僅限教職員工生使用",
+		"2": "傾向部份限縮給教職員工生使用",
+		"3": "中立",
+		"4": "傾向部份開放給一般大眾",
+		"5": "應盡量開放給一般大眾"
+	}
+	
+	var IloveCAT ={
+		"401": "教務",
+		"402": "研究發展",
+		"403": "國際事務",
+		"404": "學生事務",
+		"405": "總務"
+	}
+	
+	var IloveEREC ={
+		"601": "出席開會", 
+		"602": "學生會體制或法規修正",
+		"603": "學生權益推動",
+		"604": "社會議題倡議",
+		"605": "監督學生會運作施政",
+		"606": "彙集選民意見"
 	}
 	
 	
@@ -1616,24 +1892,52 @@
 				sortable.push(candidate_list[i])
 			}
 		}
+	
+		var sortnoanswer =[];
+		for (var i = 0; i < noanswer_list.length; ++i) {
+			if(user_response["College"] == "所有學院"){
+				sortnoanswer.push(noanswer_list[i])
+			} else if( user_response["College"] == noanswer_list[i]["College"]){
+				sortnoanswer.push(noanswer_list[i])
+			}
+		}
 		
 		//sort
 		sortable.sort(function(a, b) {
 			return b["similarity"] - a["similarity"];
 		})
 		
-			console.log(sortable)
-		$("#result").innerHTML = '<h2>結果</h2>';
-		for (var i = 0; i < sortable.length; ++i) {
-			$("#result").innerHTML
-			+= ( "<p>" + sortable[i]["name"] + "<br/>" + 
-			sortable[i]["College"] + sortable[i]["Number"] + 
-			"號候選人<br/>與您的立場相似度：" + 
-			Math.round(sortable[i]["similarity"]/user_response["totalscore"]*10000)/100 +
-			"%<br/> 這裡會噴候選人的各題詳細回答或補充</p>")
+		
+		$("#result").innerHTML = "<h3>您選擇的選區中，下列候選人未填寫表態：</h3><p>";
+		for (var k = 0; k　< sortnoanswer.length; ++k){
+			$("#result").innerHTML += (
+				sortnoanswer[k]["College"] + sortnoanswer[k]["Number"] + "號候選人  " + sortnoanswer[k]["name"] + "<br>"
+				)
 		}
-		console.log(user_response)
-	}
+		$("#result").innerHTML += "</p><h2>比對結果（立場相似度由高至低排列）</h2>";
+		
+		for (var i = 0; i < sortable.length; ++i) {
+				$("#result").innerHTML
+				+= ( "<h3>第"+ (i+1) + "名</h3><h3>" + sortable[i]["name"] +" " + sortable[i]["College"] + sortable[i]["Number"] +"號候選人</h3>" + 
+				"<h4>與您的立場相似度：" +  Math.round(sortable[i]["similarity"]/user_response["totalscore"]*10000)/100 + "%</h4>" +
+				"<div class=\"tab1 color1\">" +
+				"<p>他認為：<br>1. 學生會預算應有 <b>" + sortable[i]["response"]["q1"]*10 + "% </b>分配給活動</p>" + 
+				"<div class=\"comment\"><p>補充回答：" + sortable[i]["comment"]["q1"] + "</p></div>" +
+				"<p>2. 在未經學生意見調查的前提下，台大學生會 <b>" + IloveRS[sortable[i]["response"]["q2"].toString()] + " </b>代表台大學生進行議題表態</p>" + 
+				"<div class=\"comment\"><p>補充回答：" + sortable[i]["comment"]["q2"] + "</p></div>" + 
+				"<p>3. 台大校園空間與資源 <b>" + IloveAARRR[sortable[i]["response"]["q3"].toString()] +"</b></p>" + 
+				"<div class=\"comment\"><p>補充回答："+ sortable[i]["comment"]["q3"] + "</p></div>" +
+				"<p>4. 台大校方應優先分發資源給 <b>" + sortable[i]["response"]["q4"].map(function(el){return IloveCAT[el.toString()]}).join(" 和 ") + "</b></p>" +
+				"<div class=\"comment\"><p>補充回答：" + sortable[i]["comment"]["q4"] +"</p></div>"+
+				"<p>5. 未來一年中最重要校園議題是 <b>" + [sortable[i]["issue"]["issue1"], sortable[i]["issue"]["issue2"]].join("") + "</b></p> " +
+				"<div class=\"comment\"><p>補充回答：" + sortable[i]["comment"]["q5"] + "</p></div>" +
+				"<p>6. 學生代表最重要的任務是 <b>" + sortable[i]["response"]["q6"].map(function(el){return IloveEREC[el.toString()]}).join(" 和 ") +"</b></p>" +
+				"<div class=\"comment\"><p>補充回答："+ sortable[i]["comment"]["q6"] + "</p></div>" +
+				"<p>來人啊！讓我看他的<a href=\"" + sortable[i]["link"] + "\" target=\"_blank\"> 選舉公報</a>" +
+				"</div>")
+			}
+		}
+	
 	})
 </script>
 
@@ -1650,9 +1954,6 @@
       </div>
     
 	</footer>
-	    <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
-    </div>
 </body>
 
 </html>
